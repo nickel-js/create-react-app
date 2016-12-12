@@ -13,6 +13,22 @@ module.exports = {
       return require.resolve('babel-plugin-transform-decorators-legacy')
     }
   },
+  'HOT': {
+    toArray: 'preLoaders',
+    fileRegex: /\.(js|jsx)/,
+    getDev: function () {
+      return {
+        test: /(\.js|\.jsx)$/,
+        loader: "react-hot"
+      }
+    },
+    getProd: function () {
+      return {
+        test: /(\.js|\.jsx)$/,
+        loader: "react-hot"
+      }
+    }
+  },
   'SASS': {
     toArray: 'loaders',
     fileRegex: /\.(scss|sass)/,

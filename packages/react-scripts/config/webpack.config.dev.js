@@ -114,7 +114,7 @@ module.exports = {
         include: paths.appSrc,
       }
     ],
-    loaders: [
+    loaders: customConfig.preLoaders.concat([
       // Default loader: load all assets that are not handled
       // by other loaders with the url loader.
       // Note: This list needs to be updated with every change of extensions
@@ -183,7 +183,7 @@ module.exports = {
           name: 'static/media/[name].[hash:8].[ext]'
         }
       }
-    ].concat(customConfig.loaders)
+    ]).concat(customConfig.loaders)
   },
   // @remove-on-eject-begin
   // Point ESLint to our predefined config.

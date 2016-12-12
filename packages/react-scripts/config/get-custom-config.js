@@ -28,6 +28,7 @@ function getCustomConfig(prod) {
       babelPlugins: [],
       plugins: [],
       loaders: [],
+      preLoaders: [],
       values: {},
       excludedFilesRegex: []
     });
