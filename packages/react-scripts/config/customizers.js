@@ -1,4 +1,5 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var paths = require('./paths');
 
 module.exports = {
   'BABEL_STAGE_0': {
@@ -19,12 +20,14 @@ module.exports = {
     getDev: function () {
       return {
         test: /(\.js|\.jsx)$/,
+        include: paths.appSrc,
         loader: "react-hot"
       }
     },
     getProd: function () {
       return {
         test: /(\.js|\.jsx)$/,
+        include: paths.appSrc,
         loader: "react-hot"
       }
     }
